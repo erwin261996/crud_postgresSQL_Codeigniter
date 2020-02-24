@@ -1,0 +1,35 @@
+#Deny from all
+#RewriteEngine On
+
+#RewriteBase /
+
+#RewriteCond %{ENV:REDIRECT_APP_PATH} !^$
+#RewriteRule ^(.*)$ - [E=APP_PATH:%{ENV:REDIRECT_APP_PATH}]
+#RewriteCond $1 !^(index.php|frontassets|dashassets|public|uploaded|pdfs|robots.txt)
+#RewriteCond %{ENV:APP_PATH} ^$
+#RewriteRule ^(.*)$ - [E=APP_PATH:/$1]
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php [L]
+
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+# activas
+RewriteEngine On
+Options -Indexes
+RewriteCond $1 !^(index.php|backup|frontassets|dashassets|public/angular/build/|public/js/build|public/js/firebaseConnect.js|public/bower_components|public/v2|public/frontassets|public/img|public/css|public/modals|uploaded|pdfs|robots.txt)
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+#php_value memory_limit 1024M
+
+#fin activas
+
+#php_value memory_limit 100M  comentada
+#php_value upload_max_filesize 100M comentada
+#php_value post_max_size 100M comentada
+#php_value max_execution_time 1000 comentada
+#php_value max_input_time 1000 comentada
