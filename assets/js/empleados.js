@@ -101,7 +101,9 @@ var update_info = function (tbody, table) {
 
     // Accion del boton 2 :: Borrar contenido
     $(tbody).on("click", "button.eliminar", function(){
-        var data = table.row($(this).closest("tr") ).data();
+        var $tr = $(this).closest('tr');
+        var data = $('#tb_empleado').DataTable().row($tr).data();
+
         $.ajax({
 	        type: 'POST',
 	        data: {'cod': data.id},

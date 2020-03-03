@@ -2,9 +2,6 @@
 
 class Empleados_model extends CI_Model {
 
-    public $title;
-    public $content;
-        public $date;
 
     public function get_empleados()
     {

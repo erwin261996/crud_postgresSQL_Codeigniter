@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<meta charset="utf-8">
 	<title>Welcome to CodeIgniter</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="<?php echo HTTP_CSS_PATH; ?>bootstrap.min.css" crossorigin="anonymous">
 
 
 	<link rel="stylesheet" href="<?php echo HTTP_CSS_PATH; ?>datatables.min.css">
@@ -78,7 +78,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 
 <script src="<?php echo HTTP_JS_PATH; ?>jquery.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="<?php echo HTTP_JS_PATH; ?>bootstrap.min.js" crossorigin="anonymous"></script>
 <script src="<?php echo HTTP_JS_PATH; ?>empleados.js"></script>
 <script src="<?php echo HTTP_JS_PATH; ?>datatables.min.js"></script>
 
